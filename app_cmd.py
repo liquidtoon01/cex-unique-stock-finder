@@ -30,6 +30,9 @@ def get_rarer_items(storeName, browser):
     if browser == "FireFox":
         print("Loading FireFox...")
         driver = webdriver.Firefox()
+    if browser == "Safari":
+        print("Loading safaridriver...")
+        driver = webdriver.Safari()
     print("Loading CeX via Browser to review stock unique to the selected store.")
     for url_string in url_strings:
         print(f"Reviewing for store unique items in the Category for: {url_string.split('=')[2].replace('+', ' ')}")
@@ -90,7 +93,7 @@ if __name__ == "__main__":
         description=PROGRAM_DESCRIPTION)
     parser.add_argument('-p', '--productid')
     parser.add_argument('-s', '--storename')
-    parser.add_argument('-b', '--browser', choices=["Edge", "FireFox", "Chrome"], default="Edge")
+    parser.add_argument('-b', '--browser', choices=["Edge", "FireFox", "Chrome","Safari"], default="Safari")
 
     args = parser.parse_args()
 
