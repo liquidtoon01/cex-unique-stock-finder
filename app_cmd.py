@@ -31,7 +31,7 @@ def get_rarer_items(storeName, browser):
         print("Loading FireFox...")
         driver = webdriver.Firefox()
     if browser == "Safari":
-        print("Loading safaridriver...")
+        print("Loading Safari...")
         driver = webdriver.Safari()
     print("Loading CeX via Browser to review stock unique to the selected store.")
     for url_string in url_strings:
@@ -133,4 +133,4 @@ if __name__ == "__main__":
         unique_to_store = list(set(unique_to_store))
         print(f"DVD Product ID's unique to {store_name} for ensuring you get {product_id} from {store_name}.")
         for i in unique_to_store:
-            print(f"{i}")
+            print(f"https://uk.webuy.com/product-detail?id={i}")
