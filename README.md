@@ -47,3 +47,15 @@ The output will show a list of items unique to that store;
 
 Order one of these items along with your wanted product on the same order and it should force the CEX system to dispatch from the chosen store.
 
+## GUI App
+A GUI app is available to use as well, however some prerequisities are needed;
+
+```pwsh
+pip install customtkinter
+```
+
+To run the app, run the following;
+```pwsh
+python3 app.py  
+```
+![alt text](image-1.png)
